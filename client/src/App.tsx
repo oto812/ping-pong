@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { io } from 'socket.io-client';
 
+
 // Connect to the server.
 // IMPORTANT: The URL must match the server's address and port.
 const socket = io('http://localhost:3000');

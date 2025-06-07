@@ -2,12 +2,13 @@
 import express from 'express';
 import http from 'http';
 import { Server as SocketIOServer } from 'socket.io';
+import cors from 'cors';
 
 const app = express();
 const server = http.createServer(app);
 const io = new SocketIOServer(server, {
   cors: {
-    origin: "http://localhost:5173", // IMPORTANT: This must match your client's address
+    origin: "*", // IMPORTANT: This must match your client's address
     methods: ["GET", "POST"]
   }
 });
